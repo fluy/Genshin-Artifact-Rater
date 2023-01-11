@@ -12,10 +12,6 @@ from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from signal import SIGINT, SIGTERM
 
-import toml
-
-config = toml.load(open("config.toml"))
-
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 AUTHOR_ID = int(os.getenv('AUTHOR_ID', 0))
@@ -37,15 +33,15 @@ if HEROKU_API_KEY and HEROKU_APP_ID:
 if DATABASE_URL:
 	import database as db
 
-#RETRIES = 1
-#MAX_CRASHES = 10
-#RATE_LIMIT_N = 5
-#RATE_LIMIT_TIME = 10
+RETRIES = 1
+MAX_CRASHES = 10
+RATE_LIMIT_N = 5
+RATE_LIMIT_TIME = 10
 
-#calls = 0
-#crashes = 0
-#started = False
-#running = False
+calls = 0
+crashes = 0
+started = False
+running = False
 
 def get_lang(ctx):
 	if DATABASE_URL:
@@ -100,12 +96,6 @@ async def on_ready():
 		count.start()
 		started = True
 
-for cogs in config['cogs']:
-	try:
-		bot.load_extension(cogs)
-		print(f'[Loaded] {cogs}')
-	except Exception as e:
-		print(f'[Error] {cogs} | {e}')
 
 
 
