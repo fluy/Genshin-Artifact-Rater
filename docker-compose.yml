@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  artifact_rater:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    tty: true
+    stdin_open: true
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - OCR_API_KEY=${OCR_API_KEY}
+    volumes:
+      - ./bot:/Genshin-Artifact-Rater
