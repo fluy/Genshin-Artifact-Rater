@@ -13,3 +13,4 @@ services:
       - OCR_API_KEY=${OCR_API_KEY}
     volumes:
       - ./bot:/Genshin-Artifact-Rater
+    container_name: artifact_rater
