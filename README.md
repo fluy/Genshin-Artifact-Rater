@@ -7,6 +7,7 @@ This is [Genshin-Artifact-Rater](https://github.com/shrubin/Genshin-Artifact-Rat
 - docker compose
 - Discord Bot Token
 - OCR Space Token
+
 Please refer to the original repository for Token preparation.
 ```
 git clone https://github.com/fluy/Genshin-Artifact-Rater.git
