@@ -1,5 +1,6 @@
 # Genshin Artifact Rater Docker Edition
 This is [Genshin-Artifact-Rater](https://github.com/shrubin/Genshin-Artifact-Rater) made to run on Docker.
+Please refer to the original repository for more information.
 
 ## Usage
 ### require
