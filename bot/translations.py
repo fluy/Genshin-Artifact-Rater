@@ -969,11 +969,14 @@ class ja(translation):
 		self.commonly_score = "スコア"
 		self.join = f'[公式サーバー]({self.SERVER_URL})に参加する'
 		self.feedback = f'フィードバックを受け取りました。詳細を追加したい場合は、 ({self.SERVER_URL})に参加して下さい。'
-		self.set_lang = 'Language set to Japanese'
+		self.set_lang = '言語設定を日本語に変更しました'
+		self.no_presets = 'プリセットがありません'
+		self.del_preset = 'プリセット「%s」を削除しました'
+		self.set_preset = 'プリセット「%s」を作成しました (%s)'
 
 		self.err = 'エラー'
 		self.err_not_found = 'エラー：画像またはURLが見つかりませんでした。同じメッセージで送信されたことを確認してください。'
-		self.err_parse = 'エラー：コマンドを解析できません。形式とスペルを再確認してください。'
+		self.err_parse = 'エラー：コマンドを解析できません。形式とスペルを再確認してください。プリセットを指定した場合は、プリセットが登録できているか`-presets`で確認してください。'
 		self.err_try_again = 'エラー：数分後にもう一度お試しください。'
 		self.err_unknown_ocr = 'エラー：OCRが不明なエラーで失敗しました。'
 		self.err_unknown = '不明なエラーが発生しました。インベントリの聖遺物ページのイメージを使用してみてください。'
@@ -981,9 +984,6 @@ class ja(translation):
 		self.help_stats = '`stat`において`hp`、`hp%`、`def`、`def%`(防御力)、`atk`、`atk%`(攻撃力)、`er`(元素チャージ効率)、`em`(元素熟知)、`phys`(物理ダメージ)、`elem`(元素ダメージ)、`cr`(会心率)、`cd`(会心ダメージ)、`heal`(治癒効果)を使えることができます。'
 
 		self.help_description = f'''
-		自分のプライベートサーバーに追加する場合は、次の[リンク](%s)を使用して下さい
-		さらに、次のコマンドをArtifact Rater#6924にダイレクトメッセージ（D M）を送ると、BOT も使えます。
-
 		`-rate <image/url> [lvl=<レベル>] [<stat>=<デフォルトの重み付け> ...]`
 		自分の聖遺物を最適な５＊聖遺物と比べます。同じメッセージにコマンドとイメージ両方を入れて下さい。
 		Windows 10を使っている場合は、Shift + Windows + Sを押すながら聖遺物の上にカーソルをドラッグし、ディスコードを開くと、Ctrl + Vで貼り付けることができます。
