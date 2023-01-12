@@ -36,6 +36,8 @@ class Preset(Base):
 		self.name = name
 
 # Base.metadata.create_all(engine)
+def create_tables(checkfirst=False):
+	Base.metadata.create_all(engine, checkfirst=checkfirst)
 
 Session = sessionmaker()
 Session.configure(bind=engine)

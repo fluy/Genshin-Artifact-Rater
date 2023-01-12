@@ -2,3 +2,4 @@
 __pycache__
 genshin
 .venv
+*.sqlite3

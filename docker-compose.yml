@@ -11,6 +11,7 @@ services:
     environment:
       - DISCORD_TOKEN=${DISCORD_TOKEN}
       - OCR_API_KEY=${OCR_API_KEY}
+      - DATABASE_URL='sqlite:///db.sqlite3'
     volumes:
       - ./bot:/Genshin-Artifact-Rater
     command: python3 /Genshin-Artifact-Rater/bot.py
