@@ -10,7 +10,7 @@ services:
     stdin_open: true
     environment:
       - DISCORD_TOKEN=${DISCORD_TOKEN}
-      - OCR_API_KEY=${OCR_API_KEY}
+      - OCR_SPACE_API_KEY=${OCR_API_KEY}
       - DATABASE_URL='sqlite:///db.sqlite3'
     volumes:
       - ./bot:/Genshin-Artifact-Rater
