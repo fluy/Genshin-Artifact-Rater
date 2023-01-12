@@ -348,7 +348,7 @@ async def rate(ctx):
 			options.append(word)
 		else:
 			print(f'Error: Could not parse "{ctx.message.content}"')
-			await send(ctx, msg=lang.err_parse)
+			await send(ctx, msg=lang.err_parse_rate)
 			return
 
 	if not url:

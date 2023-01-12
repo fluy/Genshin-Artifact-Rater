@@ -60,6 +60,7 @@ class translation:
 		self.err = 'Error'
 		self.err_not_found = 'Error: No image or url found, please make sure they were sent in the same message'
 		self.err_parse = 'Error: Command cannot be parsed, please double check the format and spelling'
+		self.err_parse_rate = 'Error: Command cannot be parsed, please double check the format and spelling'
 		self.err_try_again = 'please try again in a few minutes'
 		self.err_unknown_ocr = 'Error: OCR failed with unknown error'
 		self.err_unknown = 'Unknown error, make sure your language is set (see `-help`) and try using an image from the inventory\'s artifact page'
@@ -976,6 +977,8 @@ class ja(translation):
 
 		self.err = 'エラー'
 		self.err_not_found = 'エラー：画像またはURLが見つかりませんでした。同じメッセージで送信されたことを確認してください。'
+		self.err_parse = 'エラー：コマンドを解析できません。形式とスペルを再確認してください。'
+		self.err_parse_rate = 'エラー：コマンドを解析できません。プリセットの登録状況や、形式とスペルを再確認してください。'
 		self.err_try_again = 'エラー：数分後にもう一度お試しください。繰り返しエラーが発生する場合は、Botの管理者に連絡してください。'
 		self.err_unknown_ocr = 'エラー：文字解析中の不明なエラーで失敗しました。'
 		self.err_unknown = '不明なエラーが発生しました。インベントリの聖遺物ページのイメージを使用してみてください。'
