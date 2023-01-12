@@ -168,6 +168,7 @@ def rate(level, results, options={}, lang=tr.en()):
 	main_score = 0.0
 	sub_score = 0.0
 	sub_weight = 0
+	commonly_score = 0.0
 	main_weight = 3 + level / 4
 
 	elements = [lang.anemo, lang.elec, lang.pyro, lang.hydro, lang.cryo, lang.geo, lang.dend]
@@ -211,6 +212,7 @@ def rate(level, results, options={}, lang=tr.en()):
 		else:
 			value = validate(value, max_subs[key] * 6, '%' in key)
 			sub_score += value / max_subs[key] * weights[key]
+			commonly_score += value * weights[key]
 		result[1] = value
 
 	score = (main_score + sub_score) / (main_weight + sub_weight) * 100 if main_weight + sub_weight > 0 else 100
@@ -218,7 +220,7 @@ def rate(level, results, options={}, lang=tr.en()):
 	main_score = 100 if main_score > 99 else main_score
 	sub_score = sub_score / sub_weight * 100 if sub_weight > 0 else 100
 	print(f'Gear Score: {score:.2f}% (main {main_score:.2f}% {main_weight}, sub {sub_score:.2f}% {sub_weight})')
-	return score, main_score, main_weight, sub_score, sub_weight
+	return score, main_score, main_weight, sub_score, sub_weight, commonly_score
 
 if __name__ == '__main__':
 	if sys.version_info[0] == 3 and sys.version_info[1] >= 8 and sys.platform.startswith('win'):

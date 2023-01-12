@@ -46,6 +46,7 @@ class translation:
 		self.main_score = 'Main Stat Rating'
 		self.sub_score = 'Substat Rating'
 		self.art_level = 'Artifact Level'
+		self.commonly_score = 'Commonly Score'
 		self.join = f'For issues, join the [Artifact Rater Server]({self.SERVER_URL})'
 		self.feedback = f'Feedback received, please join {self.SERVER_URL} if you\'d like to add more details'
 		self.deprecated = 'Deprecated, please use the `-user lang <lang>` command to set your language'
@@ -961,10 +962,11 @@ class ja(translation):
 		self.replace = {'カ': '力'}
 
 		self.lvl = 'レベル'
-		self.score = '装備スコア'
-		self.main_score = 'メインステータス評価'
-		self.sub_score = 'サブステータス評価'
+		self.score = '装備評価ポイント'
+		self.main_score = 'メインステータス'
+		self.sub_score = 'サブステータス'
 		self.art_level = '聖遺物レベル'
+		self.commonly_score = "スコア"
 		self.join = f'[公式サーバー]({self.SERVER_URL})に参加する'
 		self.feedback = f'フィードバックを受け取りました。詳細を追加したい場合は、 ({self.SERVER_URL})に参加して下さい。'
 		self.set_lang = 'Language set to Japanese'

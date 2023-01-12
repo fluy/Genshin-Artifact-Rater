@@ -390,7 +390,7 @@ async def rate(ctx):
 				level = int(options[lang.lvl])
 			elif level == None:
 				level = 20
-			score, main_score, main_weight, sub_score, sub_weight = ra.rate(level, results, options, lang)
+			score, main_score, main_weight, sub_score, sub_weight, commonly_score = ra.rate(level, results, options, lang)
 			crashes = 0
 			break
 
@@ -427,7 +427,7 @@ async def rate(ctx):
 	msg += f'\n\n**{lang.score}: {int(score * (main_weight + sub_weight))} ({score:.2f}%)**'
 	msg += f'\n{lang.main_score}: {int(main_score * main_weight)} ({main_score:.2f}%)'
 	msg += f'\n{lang.sub_score}: {int(sub_score * sub_weight)} ({sub_score:.2f}%)'
-	msg += f'\n\n{lang.join}'
+	msg += f'\n\n**{lang.commonly_score}: {commonly_score:.2f}**'
 
 	embed = discord.Embed(color=color)
 	embed.set_author(name=ctx.message.author.display_name, icon_url=ctx.message.author.avatar_url)
