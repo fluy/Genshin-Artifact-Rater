@@ -43,11 +43,11 @@ async def ocr(url, num, lang=tr.en()):
 				else:
 					data.add_field('language', lang.code)
 				data.add_field('file', img.tobytes(), content_type='image/png', filename='image.png')
-				ocr_url = f'https://apipro{num}.ocr.space/parse/image'
+				ocr_url = f'https://api.ocr.space/parse/image'
 				async with session.post(ocr_url, data=data) as r:
 					json = await r.json()
 			else:
-				ocr_url = f'https://apipro{num}.ocr.space/parse/imageurl?apikey={OCR_API_KEY}&url={url}'
+				ocr_url = f'https://api.ocr.space/parse/imageurl?apikey={OCR_API_KEY}&url={url}'
 				if lang.supported:
 					ocr_url += '&OCREngine=2'
 				else:
